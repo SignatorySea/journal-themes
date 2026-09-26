@@ -1,0 +1,20 @@
+{
+  "id": "journal-themes",
+  "title": "Journal Themes",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "description": "<p>Some themed templates for your foundry journal use!</p>",
+  "authors": [
+    {
+      "name": "Sig",
+      "discord": "SignatorySea",
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "canUpload": true
+  }
+}
