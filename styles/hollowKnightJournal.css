@@ -1,0 +1,419 @@
+/* Color Selection for easy reference */
+.hk {
+   --hk-page-color: #CDCDCD;
+   --hk-header-color: white;
+   --hk-bottom-border-color: #9FA0A9;
+  --hk-Note-Background   : #d2cbd2;
+  --hk-Descriptive       : #dae8ed;
+  --hk-Light_Gray        : #8e8883;
+  --hk-Gray              : #67665f;
+  --hk-New_Gold          : #d3b885;
+  --hk-New_Dark_Red      : #76332d;
+
+	--hk-Table_Color_White : #f4f9f0;
+	--hk-Table_Color_Green : #dae7da;
+  
+  --hk-FootnoteColor     : #6f7049;
+  
+  --hk-MonsterBackground     : #f1efe9;
+  --hk-Monster_Table_Yellow  : #e8e3d5;
+  --hk-Monster_Table_Red     : #d9d0ca;
+  --hk-Monster_Table_Green   : #d2d6cc;
+  --hk-Monster_Table_Purple  : #cbc6c8;
+  --hk-HB_Color_HeaderText: #3B3A3D;
+  --hk-stat-divider: #657484;
+
+}
+
+* {
+    scrollbar-color: var(--hk-New_Gold);
+}
+
+/* effects the entire sheet page*/
+.hk .journal-entry-pages {
+    background: url("../images/hollowknight/decoratedparchment.png");
+    background-size: cover;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+/* applies to all headers */
+.hk h1, h2, h3, h4, h5{
+    text-shadow: 0 0 3px #FFFFFF, 0 0 1px #FFFFFF;
+    color: var(--hk-header-color);
+    border-bottom: 2px solid var(--hk-bottom-border-color);
+}
+
+
+/* Table customization */
+.hk table {
+    background:none;
+}
+
+.hk thead{
+    background: none;
+    border: none;
+}
+
+.hk table tbody tr:nth-child(odd) {
+    background-color: transparent;
+    background-image: url("../images/hollowknight/whiteparchment.jpg");
+    background-position: center center;
+	  filter: hue-rotate(-365deg) saturate(250%);
+    color:black;
+}
+
+
+.hk div .decoration table::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    width: 7.75cm;
+    height: calc(100% + 3.3cm);
+    content: '';
+    background-image: url("../images/hollowknight/tablebackground.svg"), url("../images/hollowknight/tablebackground.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    background-size: contain, contain;
+    filter: drop-shadow(0 0 1px #C8C5C080);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.hk .decoration{
+    overflow: visible;
+    color: black;
+
+    tbody tr:nth-child(odd) {
+    background-color: transparent;
+    background-image: url("../images/hollowknight/blackparchment.jpg");
+    background-position: center;
+	filter: hue-rotate(0deg) saturate(100%) brightness(112%) contrast(90%);
+
+    color: #cacaca;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color:black;
+    }
+}
+
+.hk .frame {
+    width: calc(100% + .2cm);
+    margin-top: .7cm;
+    margin-right: -0.1cm;
+    margin-bottom: .9cm;
+    margin-left: -0.1cm;
+    border-collapse: separate;
+    background-color: white;
+    border: initial;
+    border-style: solid;
+    border-image-source: url("../images/hollowknight/tableborder.svg");
+    border-image-slice: 200;
+    border-image-width: 47px;
+    border-image-outset: .4cm .3cm;
+    border-image-repeat: stretch;
+    filter: hue-rotate(180deg) saturate(20%) brightness(112%) contrast(90%);
+}
+
+
+
+
+
+.hk .descriptive {
+    background-color: transparent;
+    background-image: url("../images/hollowknight/goldbackground.jpg"); /* golden background */
+    background-position: bottom center;
+    filter: hue-rotate(195deg) saturate(20%) brightness(102%) contrast(105%);
+	  color: #1B1B15;
+
+    padding: .1em;
+    background-color: #FAF7EA;
+    border-style: solid;
+    border-width: 7px;
+    border-image: url("../images/hollowknight/descriptiveborder.svg") 12 stretch;
+    border-image-outset: 4px;
+    box-shadow: 0 0 6px #FAF7EA;
+}
+
+.hk .comment {
+    position          : relative;
+    width             : calc(100% + 3.4mm);
+    margin            : 4.5mm -1.7mm;
+    padding           : 3mm 7.5mm 2mm 6.5mm;
+    
+    font-family       : 'WalterTurncoat';
+    
+    background-color  : #FAFBFF;
+    border-style      : solid;
+    border-color      : #9397A9;
+    border-width      : 3.5px;
+    border-radius     : 26px;
+    box-shadow        : 0 0 24px rgba(103, 87, 167, 0.3) inset;
+    
+    color           : black;
+
+
+    &::after {
+      content     : '';
+      position    : absolute;
+      top         : -9px;
+      left        : -8px;
+      width       : calc(100% + 16px);
+      height      : calc(100% + 18px);
+      background  : #878A97;
+
+      --point1    : 34px;
+      --point2    : 35px;
+      --point3    : 0px;
+      --point4    : 2px;
+      clip-path   : polygon(
+        var(--point1)               var(--point3),
+        var(--point2)               var(--point4),
+        calc(100% - var(--point2))  var(--point4),
+        calc(100% - var(--point4))  var(--point2),
+        calc(100% - var(--point4))  calc(100% - var(--point2)),
+        calc(100% - var(--point2))  calc(100% - var(--point4)),
+        var(--point2)               calc(100% - var(--point4)),
+        var(--point4)               calc(100% - var(--point2)),
+        var(--point4)               var(--point2),
+        var(--point2)               var(--point4),
+        var(--point1)               var(--point3),
+        var(--point3)               var(--point1),
+        var(--point3)               calc(100% - var(--point1)),
+        var(--point1)               100%,
+        calc(100% - var(--point1))  100%,
+        100%                        calc(100% - var(--point1)),
+        100%                        var(--point1),
+        calc(100% - var(--point1))  var(--point3)
+      );
+    }
+}
+
+
+
+.hk .statblock{
+    padding: 8px 7px;
+    color: black;
+    background: url("../images/hollowknight/whiteparchment.jpg");
+    background-position: center center; 
+
+    max-width: 400px;
+    
+    border : 3px double var(--hk-Light_Gray);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px -2px rgba(136, 136, 136, 0.6);
+
+
+    .statblock-title, .statblock-actions-title {
+        border-bottom: 0.35mm solid #696767;
+        font-variant: small-caps;
+        break-after: avoid;
+    }
+
+    .statblock-title{
+        color: black;
+        i {display: none};
+
+ 
+
+        & .content-link{
+            font-size: 5.4mm;
+            color: #5C5B62;
+            text-decoration: none;
+            font-weight: bold;
+            background: transparent;
+            border: none;
+        }
+    }
+    &.rules-2014 .statblock-title {
+        margin-block-end: 0;
+        border: none;
+        color: var(--hk-header-color);
+        font-weight: normal;
+    }
+
+    .statblock-actions-title {
+      margin-block-start: 8px;
+      color: var(--hk-HB_Color_HeaderText);
+      font-size: var(--font-size-16);
+      font-weight: normal;
+
+    }
+
+     .statblock-tags{
+        font-style: italic;
+        color: var(--hk-Gray);
+    }
+    &.rules-2014 .statblock-tags {
+        color: var(--hk-Gray);
+    }
+    
+    .statblock-header {
+            break-inside: avoid;
+            
+            dl {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0.5em 0;
+
+                dd { margin-inline-start: 4px; color: #3B3A3D;}
+                >div {
+                            flex: 1 0 100%;
+                            &.half-width {flex: 1 0 50%}                            
+                   }
+                div > :is(dt, dd) {
+                        display: inline;
+                        line-height: 1.5;
+                }
+                dt {
+                        font-weight: bold;
+                    }
+                
+            }
+    
+    }
+    &.rules-2014 .statblock-header { margin-block-start: 8px; }
+
+    dt {
+        all:revert; 
+        color: #3B3A3D
+    }
+    .statblock-content { column-width: 400px;}
+
+    &.rules-2024 .abilities{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 6px;
+
+        table, thead, tbody, tr, th, td { all: revert; }
+        table { border-collapse: collapse; }
+
+        thead th {
+            color: var(--hk-Gray);
+            text-transform: uppercase;
+
+            &.visually-hidden {
+                clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                font-size: 1px;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+        tbody{
+            tr{
+                border-block: 1px solid var(--hk-bottom-border-color);
+
+                &:nth-of-type(odd){
+                    th, .score {background: var(--hk-Monster_Table_Yellow)}
+                    td { background: var(--hk-Monster_Table_Red)}
+                }
+
+                &:nth-of-type(even){
+                    th, .score {background: var(--hk-Monster_Table_Green)}
+                    td { background: var(--hk-Monster_Table_Purple)}
+                }
+            }
+            th {font-variant: small-caps; }
+            td {text-align: center; }
+        }
+    }
+
+    &.rules-2014 .abilities{
+        display:flex;
+        > ability {
+            flex: 1 0;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            .name {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+    }
+    &.rules-2014 :is(.statblock-header, .abilities) {
+        position:relative;
+        padding-block: 4px;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 6px;
+            inset-inline: 0;
+            background: var(--hk-stat-divider);
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+        }
+        &::before { inset-block-start: 0; }
+        &::after { inset-block-end: 0; }
+
+        &.abilities { padding-block: 12px; }
+    }
+    
+    .statblock-action {
+        > p:first-child > .name {
+            font-style: italic;
+            font-weight: bold;
+            &::after { content: ". "}
+        }
+
+        a, button {
+            display: contents;
+            cursor: inherit;
+            pointer-events: none;
+            :is(.fas, .fa-solid, .far, .fa-regular) { display: none; }
+        }
+    }
+} 
+
+
+.hk .habitat-treasure {
+    width             : 100%;
+    margin            : 0.8mm  0  2mm;
+    padding           : 1mm;
+    font-family       : 'overpass';
+    border-top        : 2px solid #C5C5C7;
+    background-image  : linear-gradient(to right, #D5D6DE, #E3E4EE 40%);
+    color               : #5C5B62;
+    
+    strong  { 
+      -webkit-text-stroke : 0.1px black;
+    }
+}
+
+.hk hr{
+    visibility        : visible;
+    height            : 2.5mm;
+    margin            : 4mm 0 2mm;
+    background-image  : url("../images/hollowknight/divider.png");
+    background-size   : 100% 100%;
+    border            : none;
+    opacity           : 0.30;
+}
+
+.hk .note {
+    background-color: transparent;
+    background-image: url("../images/hollowknight/whiteparchment.jpg");
+    background-position: center center; 
+    filter: saturate(100%) brightness(105%) contrast(102%);
+    color: black;
+
+    border-image: url("../images/hollowknight/noteborder.svg") 12 stretch;
+    border-style: solid;
+    border-width: 1px;
+    border-image-width: 11px;
+    border-image-outset: 9px 0px;
+    box-shadow: 1px 4px 14px #888888;
+}
+
+
+.hk .column {
+    flex: 50%;
+    padding: 10px;
+}
+
+.hk .row {
+    display: flex;
+}

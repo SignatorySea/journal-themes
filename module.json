@@ -1,10 +1,12 @@
 {
   "id": "journal-themes",
   "title": "Journal Themes",
+  "esmodules": ["scripts/journal-sheets.js"],
+  "styles": ["styles/hollowKnightJournal.css"],
   "version": "1.0.0",
   "compatibility": {
     "minimum": "13",
-    "verified": "13"
+    "verified": "14"
   },
   "description": "<p>Some themed templates for your foundry journal use!</p>",
   "authors": [
