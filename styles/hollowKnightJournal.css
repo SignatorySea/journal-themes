@@ -5,10 +5,10 @@
    --hk-bottom-border-color: #9FA0A9;
   --hk-Note-Background   : #d2cbd2;
   --hk-Descriptive       : #dae8ed;
-  --hk-Light_Gray        : #8e8883;
+  --hk-Light-Gray        : #8e8883;
   --hk-Gray              : #67665f;
-  --hk-New_Gold          : #d3b885;
-  --hk-New_Dark_Red      : #76332d;
+  --hk-New-Gold          : #d3b885;
+  --hk-New-Dark-Red      : #76332d;
 
 	--hk-Table_Color_White : #f4f9f0;
 	--hk-Table_Color_Green : #dae7da;
@@ -22,12 +22,12 @@
   --hk-Monster_Table_Purple  : #cbc6c8;
   --hk-HB_Color_HeaderText: #3B3A3D;
   --hk-stat-divider: #657484;
-
 }
 
-* {
-    scrollbar-color: var(--hk-New_Gold);
+.hk .journal-entry-pages.scrollable.editable {
+    scrollbar-color: var(--hk-New-Gold) transparent;
 }
+
 
 /* effects the entire sheet page*/
 .hk .journal-entry-pages {
@@ -35,10 +35,12 @@
     background-size: cover;
     padding-left: 10px;
     padding-top: 20px;
+    font-family: 'trajan_probold';
 }
 
 /* applies to all headers */
 .hk h1, h2, h3, h4, h5{
+    font-family: 'trajan_probold';
     text-shadow: 0 0 3px #FFFFFF, 0 0 1px #FFFFFF;
     color: var(--hk-header-color);
     border-bottom: 2px solid var(--hk-bottom-border-color);
@@ -200,7 +202,7 @@
 
     max-width: 400px;
     
-    border : 3px double var(--hk-Light_Gray);
+    border : 3px double var(--hk-Light-Gray);
     border-radius: 10px;
     box-shadow: 3px 3px 5px -2px rgba(136, 136, 136, 0.6);
 
