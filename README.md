@@ -8,7 +8,7 @@ Each of these themes can be selected per journal using the "Sheet Configuration"
 
 ## Hollow Knight
 
-The first theme added to this pack was designed by CamunonZ over on [Homebrewery](https://homebrewery.naturalcrit.com/share/aEktI6B6RtzB) I suggest you go give the original a look and give CamunonZ your support!
+The first theme added to this pack was designed by CamunonZ over on [Homebrewery](https://homebrewery.naturalcrit.com/share/aEktI6B6RtzB) and rebuilt in foundry with their approval. I suggest you go give the original a look and give CamunonZ your support!
 
 I have rebuilt the style template as a Foundry Journal, including the DnD 5e and 5.5e statblock reskins.
 
