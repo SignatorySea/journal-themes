@@ -2,6 +2,7 @@ globalThis.MODULE_ID = "sigs-dnd-items";
 
 Hooks.once("init", () => {
     hollowKnightJournal();
+    vampireJournal();
 
 });
 
@@ -22,6 +23,23 @@ function hollowKnightJournal(){
     canBeDefault: true,
     canConfigure: true
   }); //this code is courtesy of u/Freeze014
+}
+
+function vampireJournal() {
+    class VP extends foundry.applications.sheets.journal.JournalEntrySheet { 
+        constructor(doc, options) {
+        super(doc, options);
+        this.options.classes.push("vp"); 
+        }
+    }
+
+  foundry.applications.apps.DocumentSheetConfig.registerSheet(JournalEntry, MODULE_ID, VP, {
+    types: ["base"],
+    label: "Vampire Theme", 
+    makeDefault: false,
+    canBeDefault: true,
+    canConfigure: true
+  });
 }
 
 //this only works in v14 and above for inserting in the editor, but I think thats okay

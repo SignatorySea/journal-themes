@@ -1,0 +1,89 @@
+/* color selections for easy reference */
+.vp {
+    --vp-black: #000000;
+    --vp-darkest-red: #870202;
+    --vp-lightest-red: #e70303;
+    --vp-gold: #C29A56;
+    --vp-white-rosary: #EBE0C2;
+    --vp-ashes: #B7B4AE;
+    --vp-sepia-black: #2E0707;
+    --vp-mid-red: #5D0813;
+    --vp-table-frame-backdrop: #4A060F;
+}
+
+.vp .journal-entry-pages.scrollable.editable {
+    scrollbar-color: var(--vp-gold) transparent;
+}
+
+.vp .journal-entry-pages {
+    background: url("../images/vampire/vampirebackground.png");
+    background-size: cover;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.vp thead{
+    background: none;
+    border: none;
+}
+
+.vp table tbody tr:nth-child(odd) {
+    background-color: transparent;
+    background-image: url("../images/vampire/blackwithredpaper.png");
+    background-position: center;
+    color: var(--vp-white-rosary);
+}
+
+.vp table {
+    background-color: var(--vp-mid-red);
+    color: var(--vp-gold);
+}
+
+.vp .frame {
+    width: calc(100% + .2cm);
+    margin-top: .7cm;
+    margin-right: -0.1cm;
+    margin-bottom: .9cm;
+    margin-left: -0.1cm;
+    background: var(--vp-table-frame-backdrop);
+    position: relative;
+    padding-bottom: 25px;
+
+    &::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    border-collapse: separate;
+    border: initial;
+    border-style: solid;
+    border-width: 150px;
+    border-image-source: url("../images/vampire/tableborder.svg");
+    border-image-slice: 342 350 345 360;
+    border-image-width: 150px;
+    border-image-outset: 35px;
+    border-image-repeat: stretch;
+    z-index: 10;
+    }
+
+}
+
+
+.vp .comment {
+    content:"";
+    padding: 2rem 2.5rem;
+    background-image: url("../images/vampire/parchment1.webp");
+    background-position: center center;
+    color: var(--vp-sepia-black);
+    
+    clip-path: polygon(
+    0% 0%, 100% 0%, 100% 95%,
+    97% 100%, 93% 96%, 88% 99%, 83% 95%, 78% 99%, 73% 94%, 
+    68% 98%, 63% 94%, 58% 99%, 53% 95%, 48% 98%, 43% 94%, 38% 99%, 
+    33% 95%, 28% 98%, 23% 94%, 18% 99%, 13% 95%, 8% 98%, 3% 95%, 
+    0% 100%
+    );
+  
+
+    filter: drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.1));
+}
+
