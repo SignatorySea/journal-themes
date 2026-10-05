@@ -45,8 +45,8 @@ function vampireJournal() {
 //this only works in v14 and above for inserting in the editor, but I think thats okay
 function registerProseMirrorInserts(){
     CONFIG.TextEditor.inserts.push({
-        action: "Hollow Knight",
-        title: "Hollow Knight Journal Templates",
+        action: "Journal Themes",
+        title: "Journal Theme Templates",
         children: [
             {
                 action: "Decorated Table",

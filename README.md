@@ -12,4 +12,10 @@ The first theme added to this pack was designed by CamunonZ over on [Homebrewery
 
 I have rebuilt the style template as a Foundry Journal, including the DnD 5e and 5.5e statblock reskins.
 
-![Displayed Image of the theme](./gitImages/hollowknight.png)
+![Displayed Image of the Hollow Knight theme](./gitImages/hollowknight.png)
+
+
+## Vampire
+In celebration of October the second theme added to this pack is as red as the blood of our enemies!
+
+![Dispalyed Image of the Vampuire theme](./gitImages/vampire.png)
