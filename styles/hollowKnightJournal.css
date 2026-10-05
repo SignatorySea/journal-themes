@@ -39,7 +39,7 @@
 }
 
 /* applies to all headers */
-.hk h1, h2, h3, h4, h5{
+.hk h1, .hk h2, .hk h3, .hk h4, .hk h5{
     font-family: 'trajan_probold';
     text-shadow: 0 0 3px #FFFFFF, 0 0 1px #FFFFFF;
     color: var(--hk-header-color);
@@ -324,13 +324,14 @@
 
     &.rules-2014 .abilities{
         display:flex;
-        > ability {
+        > .ability {
             flex: 1 0;
             display: flex;
             flex-direction: column;
             text-align: center;
+
             .name {
-                text-transform: uppercase;
+                font-variant: small-caps;
                 font-weight: bold;
             }
         }

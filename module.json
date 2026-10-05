@@ -2,7 +2,7 @@
   "id": "journal-themes",
   "title": "Journal Themes",
   "esmodules": ["scripts/journal-sheets.js"],
-  "styles": ["styles/hollowKnightJournal.css"],
+  "styles": ["styles/hollowKnightJournal.css", "styles/vampireJournal.css"],
   "version": "",
   "compatibility": {
     "minimum": "13",
